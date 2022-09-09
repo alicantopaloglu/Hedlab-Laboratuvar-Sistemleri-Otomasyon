@@ -1,0 +1,58 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+byMarc.Net2.Library.Nullable
+</name>
+</assembly>
+<members>
+<member name="T:byMarc.Net2.Library.Nullable.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:byMarc.Net2.Library.Nullable.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:byMarc.Net2.Library.Nullable.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:byMarc.Net2.Library.Nullable.NullableLib.IfNothing(System.Object,System.Object)">
+ <summary>
+ Returns an object, if a value is nothing.
+ </summary>
+ <param name="value">The value to test for nothing.</param>
+ <param name="nothingValue">The value to return if, <paramref name="value" /> is nothing.</param>
+ <returns>The object <paramref name="nothingValue" />, if <paramref name="value" /> is nothing; otherwise <paramref name="value" />.</returns>
+</member>
+<member name="M:byMarc.Net2.Library.Nullable.NullableLib.IfNull(System.Object,System.Object)">
+ <summary>
+ Returns an object instead of a DBNull value.
+ </summary>
+ <param name="dbValue">The value to test for DBNull.</param>
+ <param name="dbNullValue">The object to return, if value is DBNull.</param>
+ <returns>Returns an object, if dbValue is DBNull; otherwise the dbNullValue is returned.</returns>
+</member>
+<member name="M:byMarc.Net2.Library.Nullable.NullableLib.IfNull(System.Object)">
+ <summary>
+ Returns an empty string instead of a NULL value.
+ </summary>
+ <param name="dbValue">The value to test for NULL.</param>
+ <returns>An empty string, if dbValue is NULL; otherwise the dbValue is returned.</returns>
+</member>
+<member name="M:byMarc.Net2.Library.Nullable.NullableLib.ObjectsAreEqual(System.Object,System.Object)">
+ <summary>
+ Returns true, if two objects are the same.
+ </summary>
+ <param name="objectA"></param>
+ <param name="objectB"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,293 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+byMarc.Net2.Library.Strings
+</name>
+</assembly>
+<members>
+<member name="T:byMarc.Net2.Library.Strings.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:byMarc.Net2.Library.Strings.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:byMarc.Net2.Library.Strings.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.AllHaveValue(System.String[])">
+ <summary>
+ Returns true if all string value are not empty or nothing.
+ </summary>
+ <param name="values"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.AnyHasValue(System.String[])">
+ <summary>
+ Returns true if any string value is not empty or nothing.
+ </summary>
+ <param name="values"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.BuildPath(System.String,System.Boolean,System.Boolean,System.String[])">
+ <summary>
+ Returns a concatenation of all path segments with one and only one separator between each path segment.
+ </summary>
+ <param name="separator">The separator to use between each segment of the path.  \ or / are commonly used.</param>
+ <param name="ensureLeading">Set to TRUE, to ensure there is a separator at the beginning of the path.</param>
+ <param name="ensureTrailing">Set to TRUE, to ensure there is a separator at the end of the path.</param>
+ <param name="pathSegments">The list of segments to concatenate.  Leading and trailing separators are ignored.</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.BuildPath(System.String[])">
+ <summary>
+ Returns a path with a single backslash between each and every segment.  The returned path is guaranteed to have no leading or trailing backslash
+ </summary>
+ <param name="pathSegments"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.CompareLeadingNumeric(System.String,System.String)">
+ <summary>
+ Returns -1, 0 or 1 based on the result of a hybrid string and numeric comparison.  A numeric portion of the string at the beginning is used to determine the comparison.
+ </summary>
+ <param name="s1"></param>
+ <param name="s2"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.DelimitIf(System.String,System.String,System.String)">
+ <summary>
+ Returns the concatenation of two strings with a delimiter between them, if both strings are non-empty.
+ </summary>
+ <param name="prefix">The first string to concatenate.</param>
+ <param name="delimiter">A delimiter to place inbetween the two strings, in both of them are non-empty.</param>
+ <param name="suffix">The second string to concatenate.</param>
+ <returns>A string that represents [stringA] + [delimiter] + [stringB].</returns>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.Duplicate(System.String,System.Int32)">
+ <summary>
+ Returns the concatenation of a string copied a specific number of times.
+ </summary>
+ <param name="s"></param>
+ <param name="count"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.EncapsulateIf(System.String,System.String,System.String)">
+ <summary>
+ Concatenates a prefix and suffix string to a string value, if the string value is non-empty.
+ </summary>
+ <param name="prefix">The string to prefix the stringValue parameter with.</param>
+ <param name="stringValue">The string to test and return.</param>
+ <param name="suffix">The string to concatate as the prefix of stringValue, if stringValue is non-empty.</param>
+ <returns>[stringValue] + [conditionalPrefixString]</returns>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.EncapsulateInQuotes(System.String,System.String)">
+ <summary>
+ Returns a string enclosed in quotes, with the quote character doubled in the string.
+ </summary>
+ <param name="s"></param>
+ <param name="quoteChar"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.EnsurePrefix(System.String,System.String)">
+ <summary>
+ Returns a string with a specific prefix.  The original string is returned if it already contains the prefix; otherwise the prefix is concatenated to it.
+ </summary>
+ <param name="prefix"></param>
+ <param name="value"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.EnsureSuffix(System.String,System.String)">
+ <summary>
+ Returns a string with a specific suffix.  The original string is returned if it already contains the suffix; otherwise the suffix is concatenated to it.
+ </summary>
+ <param name="value"></param>
+ <param name="suffix"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.ExtractText(System.String,System.Nullable{System.Int32},System.String,System.String,System.Int32@)">
+ <summary>
+ Returns a substring found within a another string.  A starting position, prefix and suffix can all be specified to identify the location of the text to extract.
+ </summary>
+ <param name="text">The source text from which the substring will be returned from.</param>
+ <param name="startPosition">An integer position to start the search from.  If no starting position is specified, an index position of 1 (base 1) is used.</param>
+ <param name="prefixText">A string that is used to identify the starting location for the text to return.  The starting position will be advanced to this search text.  If this prefix text is not found, nothing is returned.</param>
+ <param name="suffixText">A string that is used to identify where the returned text is to stop.  If this suffix text is not specified, the remaining text in the string is returned.  If the suffix text is not found, nothing is returned.</param>
+ <param name="nextPosition">Returns the character index position that follows after the suffix text.  If no suffix text was specified, Len(text) + 1 is returned.</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.IfEmpty(System.String,System.Object)">
+ <summary>
+ Returns a value instead of a value with no length.
+ </summary>
+ <param name="value">The value to test for nothing.</param>
+ <param name="emptyValue">The value to return if, <paramref name="value" /> is blank.</param>
+ <returns>The object <paramref name="nothingValue" />, if <paramref name="value" /> is nothing; otherwise <paramref name="value" />.</returns>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.IsAlpha(System.String)">
+ <summary>
+ Returns True, if every character in a string is an alphabetic character (a-z, A-Z).
+ </summary>
+ <param name="s">The string to test.</param>
+ <returns>TRUE, if every character in <paramref name="Value" /> is a character between 'a' and 'z' or 'A' and 'Z'; FALSE otherwise.</returns>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.IsAlphaNumeric(System.String)">
+ <summary>
+ Returns true, if every character in a string is alphabetic or numeric (a-z, A-Z, 0-9).
+ </summary>
+ <param name="s">The string to test.</param>
+ <returns>TRUE, if every character in <paramref name="Value" /> is a character between 'a' and 'z' or 'A' and 'Z' or '0' and '9'; FALSE otherwise.</returns>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.IsAlphaNumeric(System.Char)">
+ <summary>
+ Returns true, if a character is alphabetic or numeric (a-z, A-Z, 0-9).
+ </summary>
+ <param name="c"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.IsDigit(System.String)">
+ <summary>
+ Returns True, if a every character in a string is a digit (0-9) or the string is empty.
+ </summary>
+ <param name="s">The string to test.</param>
+ <returns>TRUE, if every character in <paramref name="Value" /> is a character between '0' and '9'; FALSE otherwise.</returns>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.IsDigits(System.Char)">
+ <summary>
+ Returns True, if a single character is a digit.
+ </summary>
+ <param name="c"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.IsEnclosed(System.String,System.String)">
+ <summary>
+ Returns TRUE, is a string has a given prefix and suffix.
+ </summary>
+ <param name="s"></param>
+ <param name="prefixAndSuffix"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.IsHexadecimal(System.String)">
+ <summary>
+ Returns true, if every character in a string is a hexadecimal digit.
+ </summary>
+ <param name="s"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.IsLowerAlpha(System.String)">
+ <summary>
+ Returns True, if every character in a string is lowercase alphabetic (a-z).
+ </summary>
+ <param name="s">The string to test.</param>
+ <returns>TRUE, if every character in <paramref name="Value" /> is a character between 'a' and 'z'; FALSE otherwise.</returns>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.IsLowerAlpha(System.Char)">
+ <summary>
+ Returns True, if a single character is lowercase alphabetic (a-z).
+ </summary>
+ <param name="c"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.IsUpperAlpha(System.String)">
+ <summary>
+ Returns true, if every character in a string is uppercase alphabetic (A-Z).
+ </summary>
+ <param name="s">The string to test.</param>
+ <returns>TRUE, if every character in <paramref name="Value" /> is a character between 'A' and 'Z'; FALSE otherwise.</returns>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.IsUpperAlpha(System.Char)">
+ <summary>
+ Returns true, if a single character is uppercase alphabetic (A-Z).
+ </summary>
+ <param name="c"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.IsUpperAlphaNumeric(System.String)">
+ <summary>
+ Returns true, if every character in a string is uppercase alphabetic or numeric (A-Z, 0-9).
+ </summary>
+ <param name="s">The string to test.</param>
+ <returns>TRUE, if every character in <paramref name="Value" /> is a character between 'A' and 'Z' or '0' and '9'; FALSE otherwise.</returns>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.IsUpperAlphaNumeric(System.Char)">
+ <summary>
+ Returns true, if a single character is uppercase alphabetic or numeric (A-Z, 0-9).
+ </summary>
+ <param name="c"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.JoinList(System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String)">
+ <summary>
+ Concatenates a list of strings.  Allows item delimiters, last item delimiters, item prefixes and item suffixes to be specified.
+ </summary>
+ <param name="list">The list to join.</param>
+ <param name="delimiter">The text to insert between entries, if there is more than one extry and excluding the last entry.  If not specified, a comma will be used.</param>
+ <param name="lastDelimiter">The text to insert before the last entry, if it is not the only entry.  If not specified, the delimiter will be used.</param>
+ <param name="itemPrefix">The text to insert before each entry.  If not specified, nothing will be inserted.</param>
+ <param name="itemSuffix">The text to insert after each entry.  If not specified, nothing will be inserted.</param>
+ <returns></returns>
+ <remarks>
+ This method can be used to produce an english reading list.  Example: cars, automobiles, trains and planes.
+ This routine was converted from using the DelimitIf routine to using a StringBuilder to improve performance.
+ </remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.PrefixIf(System.String,System.String)">
+ <summary>
+ Concatenates a prefix string to a string value, if the string value is non-empty.
+ </summary>
+ <param name="conditionalPrefixString">The string to concatate as the prefix of stringValue, if stringValue is non-empty.</param>
+ <param name="stringValue">The string to test and return.</param>
+ <returns>[conditionalPrefixString] + [stringValue]</returns>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.Plural(System.Int32,System.String,System.String,System.Boolean)">
+ <summary>
+ Returns a quantity number followed by either a singular or plural version of text, depending on whether the quantity value is equal to 1 or not.
+ </summary>
+ <param name="quantity"></param>
+ <param name="singularText"></param>
+ <param name="pluralText"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.SuffixIf(System.String,System.String)">
+ <summary>
+ Concatenates a suffix string to a string value, if the string value is non-empty.
+ </summary>
+ <param name="stringValue">The string to test and return.</param>
+ <param name="conditionalSuffixString">The string to concatate as the prefix of stringValue, if stringValue is non-empty.</param>
+ <returns>[stringValue] + [conditionalPrefixString]</returns>
+</member>
+<member name="M:byMarc.Net2.Library.Strings.StringLib.TryParseLeadingDouble(System.String,System.Double@)">
+ <summary>
+ Returns a numeric value (of type double) that is found at the beginning of a string.
+ </summary>
+ <param name="s"></param>
+ <param name="d"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

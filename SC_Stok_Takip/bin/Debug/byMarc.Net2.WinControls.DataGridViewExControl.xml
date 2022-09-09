@@ -1,0 +1,192 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+byMarc.Net2.WinControls.DataGridViewExControl
+</name>
+</assembly>
+<members>
+<member name="T:byMarc.Net2.WinControls.DataGridViewExControl.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:byMarc.Net2.WinControls.DataGridViewExControl.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:byMarc.Net2.WinControls.DataGridViewExControl.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:byMarc.Net2.WinControls.DataGridViewExControl.My.Resources.Resources.Ascending">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:byMarc.Net2.WinControls.DataGridViewExControl.My.Resources.Resources.Descending">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:byMarc.Net2.WinControls.DataGridViewExControl.My.Resources.Resources.DropDown">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:byMarc.Net2.WinControls.DataGridViewExControl.My.Resources.Resources.FilteredDropDown">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="M:byMarc.Net2.WinControls.DataGridViewExControl.IDataGridViewExCustomSort.BeforeSort">
+ <summary>
+ This method is called before the sort is called.  It allows the object to perform initialization that may be required for the sort.  In this case, the DataGridViewExComboBox object needs to create dictionary values for he valuemembers 
+ and displaymembers.  Otherwise, it has to scan the entire datasource for every compare just to get the displaymember values, which is agonizingly slow.  This method allows the object to create lookup dictionaries beforehand.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:byMarc.Net2.WinControls.DataGridViewExControl.AutoFilterItem">
+ <summary>
+ Represents a custom KeyValuePair tailored for the AutoFilter combobox.
+ </summary>
+ <remarks>
+ This class differs from a KeyValuePair in that there is a ToString override.
+ </remarks>
+</member>
+<member name="M:byMarc.Net2.WinControls.DataGridViewExControl.DataGridViewExComboBoxColumn.SortCompare(System.Object,System.Object)">
+ <summary>
+ Returns the comparison of two values.
+ </summary>
+ <param name="value1"></param>
+ <param name="value2"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:byMarc.Net2.WinControls.DataGridViewExControl.IDataGridViewExColumnAlias.ColumnTitle">
+ <summary>
+ Represents the original column title.  This column title becomes the source column title that can be displayed to the user or to reset back to the original default title.  This is because the HeaderText property is modified based on the titles set by the user; so we need a property that holds the original column title.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.WinControls.DataGridViewExControl.DataGridViewEx.ActiveRows">
+ <summary>
+ Returns an array of rows that the user has selected (row headers are visible or full row selection enabled), has one or more cells selected or is the current row (row headers not visible and full row selection not enabled).  If there are no rows, an empty array is returned.  The NewRow is never returned.
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.WinControls.DataGridViewExControl.DataGridViewEx.PreserveCurrentUserState">
+ <summary>
+ Returns the current state of the DataGridView, from the user's perspective (top row, left column and the current cell column and row index).
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.WinControls.DataGridViewExControl.DataGridViewEx.RestoreCurrentUserState(byMarc.Net2.WinControls.DataGridViewExControl.UserState)">
+ <summary>
+ Restores the current state of the DataGridView, from the user's perspective (top row, left column and the current cell column and row index).
+ </summary>
+ <param name="userState"></param>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.WinControls.DataGridViewExControl.DataGridViewEx.RefreshSuspendCount">
+ <summary>
+ Returns the refresh suspension count.
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.WinControls.DataGridViewExControl.DataGridViewEx.SuspendRefresh">
+ <summary>
+ Increments the refresh suspension count by 1.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.WinControls.DataGridViewExControl.DataGridViewEx.ResumeRefresh">
+ <summary>
+ Decrements the refresh suspension count by 1.  When the suspension count reaches 0, the refresh command is sent.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.WinControls.DataGridViewExControl.DataGridViewEx.PasteSelection">
+ <summary>
+ 
+ </summary>
+ <remarks>
+ 1. Prep position for next paste with location of current cell.
+ 
+   2. Position current cell at location for next paste.
+   3. If new row, create row and relocate current cell.
+   4. Paste cell value
+   5. Validate cell
+   6. If validation fails, begin edit cell.  Make user fix or clear cell.
+   7. Determine position for next paste.  Do not move current cell.
+ 8. If validate and more text, go to step 2.
+ </remarks>
+</member>
+<member name="E:byMarc.Net2.WinControls.DataGridViewExControl.DataGridViewEx.BeforeDeleteSelection">
+ <summary>
+ Fired (only once) before one or more rows are deleted.  This event is fired before any BeforeDeleteRow or AfterDeleteRow events are fired.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:byMarc.Net2.WinControls.DataGridViewExControl.DataGridViewEx.AfterDeleteSelection">
+ <summary>
+ Fired (only once) after one or more rows are deleted.  This event is fired after all of the AfterDeleteRow events are fired.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.WinControls.DataGridViewExControl.DataGridViewEx.CopySelection">
+ <summary>
+ 
+ </summary>
+ <returns></returns>
+ <remarks>
+ We cannot enumerate the selected cells and perform the copy at the same time, because the cells that are returned from the enumerator may not be in top-down, left to right order.
+ </remarks>
+</member>
+<member name="P:byMarc.Net2.WinControls.DataGridViewExControl.IDataGridViewExColumn.AutoFilterEnabled">
+ <summary>
+ Gets or sets whether the auto filter feature is enabled for the column.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.WinControls.DataGridViewExControl.IDataGridViewExColumn.DefaultValue">
+ <summary>
+ Returns the value that the cell should be set with when the user clears the cell.
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.WinControls.DataGridViewExControl.IDataGridViewExColumn.GetAutoFilterValue(System.Object)">
+ <summary>
+ Returns the value of the cell to be used during auto filter operations.  The ComboBox column returns the value of the ListItem.
+ </summary>
+ <param name="value"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.WinControls.DataGridViewExControl.IDataGridViewExColumn.HeaderCell">
+ <summary>
+ Returns the instance of the DataGridViewExAutoFilterHeaderCell associated to the column.
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.WinControls.DataGridViewExControl.IDataGridViewExColumn.Index">
+ <summary>
+ Returns the index of the column in the DataGridView control.
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

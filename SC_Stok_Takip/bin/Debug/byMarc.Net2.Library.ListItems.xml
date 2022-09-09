@@ -1,0 +1,76 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+byMarc.Net2.Library.ListItems
+</name>
+</assembly>
+<members>
+<member name="T:byMarc.Net2.Library.ListItems.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:byMarc.Net2.Library.ListItems.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:byMarc.Net2.Library.ListItems.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:byMarc.Net2.Library.ListItems.ListItemsLib.EnumerationToListItems(System.Type)">
+ <summary>
+ Builds an array of ListItems from an enumeration.  Each enumeration has a name (string) and a 
+ value (integer).  These components are returned in a list of ListItems because a ListItem has both
+ string and value components.
+ </summary>
+ <param name="enumeration"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.ListItems.ListItemsLib.ItemExists(byMarc.Net2.Library.ListItems.SelectListItem[],System.String)">
+ <summary>
+ Returns true, if an array of ListItem objects contains a specific value.
+ </summary>
+ <param name="listItems">The list of items to check.</param>
+ <param name="value">The value to look for in the list of items.</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:byMarc.Net2.Library.ListItems.SelectListItem.Enabled">
+ <summary>
+ Returns whether or not this list item is enabled.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:byMarc.Net2.Library.ListItems.SelectListItem.Text">
+ <summary>
+ Gets or sets the text that is displayed for this list item.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:byMarc.Net2.Library.ListItems.SelectListItem.ToString">
+ <summary>
+ Returns the text that is displayed for this list item.
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:byMarc.Net2.Library.ListItems.SelectListItem.Value">
+ <summary>
+ Gets or sets the value that is associated to this list item.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>
